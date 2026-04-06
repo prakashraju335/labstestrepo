@@ -1,0 +1,13 @@
+name: App A CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-java-template:
+    # Replace 'your-org' with your GitHub username/org name
+    uses: prakashraju335/firstrepo_apr2026/.github/workflows/java-build.yml@main
+    with:
+      java-version: '17'
+      build-command: './mvnw clean package -pl app-a'
