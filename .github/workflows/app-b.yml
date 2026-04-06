@@ -1,0 +1,12 @@
+name: App B CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-java-template:
+    uses: prakashraju335/firstrepo_apr2026/.github/workflows/java-build.yml@main
+    with:
+      java-version: '21' # You can easily use different versions
+      build-command: './mvnw clean package -pl app-b'
