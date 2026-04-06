@@ -3,6 +3,7 @@ name: App A CI
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:    
 
 jobs:
   call-java-template:
